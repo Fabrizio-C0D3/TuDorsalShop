@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>    <!-- Brand Palette: Dark Premium Pitch -->
-    <color name="brand_pitch_green">#2D936C</color> <!-- Verde Principal -->
-    <color name="brand_midnight_bg">#121B2B</color> <!-- Fondo Oscuro -->
-    <color name="brand_surface_slate">#1E293B</color> <!-- Cards/Inputs -->
-    <color name="brand_text_bone">#F8FAFC</color> <!-- Texto Principal -->
-    <color name="brand_alert_coral">#F43F5E</color> <!-- Alertas/Descuentos -->
-    <color name="brand_premium_gold">#EAB308</color> <!-- Detalles/Dorsal -->
+<resources>
+    <!-- TuDorsal Shop Palette -->
+    <color name="primary_dark">#121B2B</color>
+    <color name="accent_green">#2D936C</color>
+    <color name="surface_slate">#1E293B</color>
+    <color name="text_bone">#F8FAFC</color>
+    <color name="alert_coral">#F43F5E</color>
+    <color name="gold_dorsal">#EAB308</color>
 
-    <!-- UI Helpers -->
-    <color name="ui_text_dimmed">#94A3B8</color>
-    <color name="ui_border_subtle">#334155</color>
+    <!-- Base Colors -->
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+    <color name="ui_text_dimmed">#94A3B8</color>
 </resources>
