@@ -1,3 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">TuDorsal Shop</string>
+
+    <!-- Auth & Onboarding -->
+    <string name="auth_login_title">Bienvenido al Vestuario</string>
+    <string name="auth_register_title">Crea tu Ficha de Jugador</string>
+    <string name="auth_hint_email">Correo electrónico</string>
+    <string name="auth_hint_password">Contraseña</string>
+    <string name="auth_btn_login">Entrar a la Cancha</string>
+    <string name="auth_btn_register">Fichar Ahora</string>
+
+    <!-- Roles / Perfiles -->
+    <string name="profile_buyer">Comprador</string>
+    <string name="profile_seller">Vendedor Oficial</string>
+    <string name="profile_admin">Administrador de Liga</string>
+    <string name="profile_logout">Cerrar Sesión</string>
+
+    <!-- Gestión de Productos -->
+    <string name="prod_add_title">Publicar Nuevo Dorsal</string>
+    <string name="prod_hint_name">Nombre del producto</string>
+    <string name="prod_hint_price">Precio de venta</string>
+    <string name="prod_stock_label">Stock disponible: %1$d</string>
+    <string name="prod_discount_tag">OFERTA ESPECIAL</string>
+
+    <!-- Carrito -->
+    <string name="cart_title">Mi Carrito</string>
+    <string name="cart_checkout">Finalizar Compra</string>
+    <string name="cart_total">Total: %1$s</string>
+    <string name="cart_empty">Tu carrito está vacío. ¡Sal a buscar tu dorsal!</string>
 </resources>
