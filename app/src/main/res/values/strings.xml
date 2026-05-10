@@ -4,36 +4,34 @@
 
     <!-- Autenticación -->
     <string name="login_title">Iniciar Sesión</string>
-    <string name="login_button">Entrar</string>
-    <string name="register_title">Registro de Usuario</string>
-    <string name="register_button">Crear Cuenta</string>
+    <string name="login_button">Sign In</string>
+    <string name="biometric_login">Ingresar con huella</string>
+    <string name="no_account">¿No tienes una cuenta? </string>
+    <string name="sign_up">Registrarse</string>
+    <string name="register_title">Crear Cuenta</string>
+    <string name="register_subtitle">Regístrate para comenzar</string>
+    <string name="register_button">Fichar Jugador</string>
+    <string name="already_have_account">¿Ya tienes una cuenta? </string>
+    <string name="sign_in_link">Ingresar</string>
+    
+    <!-- Campos -->
+    <string name="full_name_hint">Nombre Completo</string>
     <string name="email_hint">Correo electrónico</string>
     <string name="password_hint">Contraseña</string>
     <string name="forgot_password">¿Olvidaste tu contraseña?</string>
+    
+    <!-- Legal -->
+    <string name="legal_notice">Al continuar, aceptas nuestros Términos de Servicio y Política de Privacidad (Ley 1581 de 2012).</string>
 
-    <!-- Perfiles -->
-    <string name="role_buyer">Comprador</string>
-    <string name="role_seller">Vendedor</string>
-    <string name="role_admin">Administrador</string>
-    <string name="profile_title">Mi Perfil</string>
+    <!-- Errores -->
+    <string name="error_empty">Este campo no puede estar vacío</string>
+    <string name="error_email">Correo no válido</string>
+    <string name="error_password">Mínimo 8 caracteres</string>
 
-    <!-- Gestión de Productos -->
-    <string name="product_list_title">Catálogo de Dorsales</string>
-    <string name="add_product">Agregar Producto</string>
-    <string name="edit_product">Editar Producto</string>
-    <string name="product_name_hint">Nombre del Dorsal</string>
-    <string name="product_price_hint">Precio</string>
-    <string name="product_stock_hint">Stock</string>
-    <string name="save_product">Guardar</string>
-
-    <!-- Carrito -->
-    <string name="cart_title">Carrito de Compras</string>
-    <string name="checkout_button">Finalizar Compra</string>
-    <string name="empty_cart">Tu carrito está vacío</string>
-    <string name="total_label">Total: </string>
-
-    <!-- Navegación -->
-    <string name="nav_home">Inicio</string>
-    <string name="nav_cart">Carrito</string>
-    <string name="nav_orders">Mis Pedidos</string>
+    <!-- Varios -->
+    <string name="entrando_al_campo">Entrando al campo...</string>
+    <string name="auth_success">¡Acceso Exitoso!</string>
+    <string name="biometric_title">Autenticación Biométrica</string>
+    <string name="biometric_subtitle">Ingresa a TuDorsal Shop con tu huella</string>
+    <string name="biometric_negative_button">Usar Contraseña</string>
 </resources>
