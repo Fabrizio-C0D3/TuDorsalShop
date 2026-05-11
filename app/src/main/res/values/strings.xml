@@ -2,36 +2,85 @@
 <resources>
     <string name="app_name">TuDorsal Shop</string>
 
-    <!-- Autenticación -->
+    <!-- Auth -->
     <string name="login_title">Iniciar Sesión</string>
     <string name="login_button">Sign In</string>
-    <string name="biometric_login">Ingresar con huella</string>
-    <string name="no_account">¿No tienes una cuenta? </string>
-    <string name="sign_up">Registrarse</string>
+    <string name="biometric_login">Biometric Login</string>
+    <string name="no_account">Don\'t have an account? </string>
+    <string name="sign_up">Sign Up</string>
     <string name="register_title">Crear Cuenta</string>
     <string name="register_subtitle">Regístrate para comenzar</string>
     <string name="register_button">Fichar Jugador</string>
-    <string name="already_have_account">¿Ya tienes una cuenta? </string>
-    <string name="sign_in_link">Ingresar</string>
+    <string name="already_have_account">Already have an account? </string>
+    <string name="sign_in_link">Sign In</string>
     
-    <!-- Campos -->
-    <string name="full_name_hint">Nombre Completo</string>
-    <string name="email_hint">Correo electrónico</string>
-    <string name="password_hint">Contraseña</string>
-    <string name="forgot_password">¿Olvidaste tu contraseña?</string>
+    <!-- Catalog -->
+    <string name="catalog_title">TuDorsal Catalog</string>
+    <string name="search_hint">Search jerseys...</string>
+    <string name="special_offer_title">¡Personaliza tu Pasión!</string>
+    <string name="special_offer_subtitle">Get 30% off on all customizations</string>
+    <string name="special_offer_desc">20% de descuento en personalización de dorsales.</string>
+    <string name="filter_all">All</string>
+    <string name="filter_premier">Premier League</string>
+    <string name="filter_laliga">La Liga</string>
+    <string name="filter_seriea">Serie A</string>
+    <string name="discount_label">25% OFF</string>
+    <string name="add_to_cart">Add to Cart</string>
     
-    <!-- Legal -->
-    <string name="legal_notice">Al continuar, aceptas nuestros Términos de Servicio y Política de Privacidad (Ley 1581 de 2012).</string>
+    <!-- Product Detail -->
+    <string name="product_details">Product Details</string>
+    <string name="select_player">Seleccionar Jugador Oficial</string>
+    <string name="custom_name_hint">Nombre Personalizado (Máx 15)</string>
+    <string name="custom_number_hint">Dorsal (Máx 99)</string>
+    <string name="personalization_label">Personalización</string>
+    
+    <!-- Cart -->
+    <string name="shopping_cart">Shopping Cart</string>
+    <string name="subtotal_label">Subtotal</string>
+    <string name="shipping_label">Envío</string>
+    <string name="taxes_label">Impuestos</string>
+    <string name="total_label">Total</string>
+    <string name="proceed_checkout">Proceed to Checkout</string>
+    <string name="empty_cart">Tu carrito está vacío</string>
+    
+    <!-- Payment -->
+    <string name="payment_title">Payment Method</string>
+    <string name="card_number_hint">Card Number</string>
+    <string name="expiry_date_hint">MM/YY</string>
+    <string name="cvv_hint">CVV</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="payment_success_title">¡Pedido Realizado con Éxito!</string>
+    <string name="order_number_label">Pedido: #TDS-98432</string>
+    <string name="back_to_home">Volver al Inicio</string>
+    
+    <!-- Profile -->
+    <string name="profile_title">User Profile</string>
+    <string name="my_orders">My Orders</string>
+    <string name="payment_methods">Payment Methods</string>
+    <string name="shipping_address">Shipping Address</string>
+    <string name="log_out">Log Out</string>
+    <string name="user_name_placeholder">Fabrizio Bracamonte</string>
+    <string name="user_email_placeholder">fabrizio@tudorsal.com</string>
 
-    <!-- Errores -->
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_cart">Cart</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- Legal -->
+    <string name="legal_notice">By continuing, you agree to our Terms of Service and Privacy Policy (Ley 1581 de 2012).</string>
+
+    <!-- Error/Validation -->
     <string name="error_empty">Este campo no puede estar vacío</string>
     <string name="error_email">Correo no válido</string>
     <string name="error_password">Mínimo 8 caracteres</string>
-
-    <!-- Varios -->
+    <string name="email_hint">Correo electrónico</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="forgot_password">¿Olvidaste tu contraseña?</string>
     <string name="entrando_al_campo">Entrando al campo...</string>
     <string name="auth_success">¡Acceso Exitoso!</string>
     <string name="biometric_title">Autenticación Biométrica</string>
     <string name="biometric_subtitle">Ingresa a TuDorsal Shop con tu huella</string>
     <string name="biometric_negative_button">Usar Contraseña</string>
+    <string name="full_name_hint">Nombre Completo</string>
 </resources>

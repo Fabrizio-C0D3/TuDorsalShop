@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.TuDorsalShop" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Main Colors -->
+    <style name="Theme.TuDorsalShop" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Colores base -->
         <item name="colorPrimary">@color/accent_green</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="colorPrimaryContainer">@color/primary_dark</item>
-        <item name="colorOnPrimaryContainer">@color/text_bone</item>
+        <item name="colorSecondary">@color/accent_green</item>
         
         <item name="android:windowBackground">@color/primary_dark</item>
         <item name="colorSurface">@color/white</item>
@@ -14,45 +14,31 @@
         <item name="android:statusBarColor">@color/primary_dark</item>
         <item name="android:navigationBarColor">@color/white</item>
 
-        <!-- Component Styles -->
+        <!-- Estilos de componentes -->
         <item name="materialButtonStyle">@style/Widget.TuDorsal.Button</item>
         <item name="textInputStyle">@style/Widget.TuDorsal.TextInputLayout</item>
     </style>
 
-    <!-- Rounded Buttons (12dp) -->
-    <style name="Widget.TuDorsal.Button" parent="Widget.Material3.Button">
+    <style name="Widget.TuDorsal.Button" parent="Widget.MaterialComponents.Button">
         <item name="shapeAppearanceOverlay">@style/ShapeAppearance.TuDorsal.Rounded12</item>
-        <item name="android:insetTop">0dp</item>
-        <item name="android:insetBottom">0dp</item>
         <item name="backgroundTint">@color/accent_green</item>
-        <item name="android:paddingVertical">14dp</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:textStyle">bold</item>
+
     </style>
 
-    <!-- TextInputLayout for White Card -->
-    <style name="Widget.TuDorsal.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
-        <item name="boxStrokeColor">@color/grey_border</item>
-        <item name="boxBackgroundColor">@color/white</item>
+    <style name="Widget.TuDorsal.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/accent_green</item>
         <item name="boxCornerRadiusTopStart">12dp</item>
         <item name="boxCornerRadiusTopEnd">12dp</item>
         <item name="boxCornerRadiusBottomStart">12dp</item>
         <item name="boxCornerRadiusBottomEnd">12dp</item>
-        <item name="hintTextColor">@color/accent_green</item>
-        <item name="android:textColorHint">@color/ui_text_dimmed</item>
-        <item name="itemIconTint">@color/accent_green</item>
     </style>
 
-    <!-- Shapes -->
-    <style name="ShapeAppearance.TuDorsal.Rounded12" parent="">
+    <style name="ShapeAppearance.TuDorsal.Rounded12" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <item name="cornerSize">12dp</item>
     </style>
 
-    <style name="ShapeAppearance.TuDorsal.CardTop" parent="">
+    <style name="ShapeAppearance.TuDorsal.CardTop" parent="ShapeAppearance.MaterialComponents.LargeComponent">
         <item name="cornerSizeTopLeft">32dp</item>
         <item name="cornerSizeTopRight">32dp</item>
-        <item name="cornerSizeBottomLeft">0dp</item>
-        <item name="cornerSizeBottomRight">0dp</item>
     </style>
 </resources>

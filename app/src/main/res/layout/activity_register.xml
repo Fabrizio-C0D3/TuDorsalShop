@@ -18,8 +18,8 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:layout_width="320dp"
-            android:layout_height="300dp"
+            android:layout_width="380dp"
+            android:layout_height="320dp"
             android:scaleType="fitCenter"
             android:src="@mipmap/tudorsalshop4" />
 
