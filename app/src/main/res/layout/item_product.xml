@@ -4,112 +4,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="@dimen/spacing_normal"
-    android:layout_marginVertical="12dp"
+    android:layout_margin="8dp"
     app:cardBackgroundColor="@color/surface_slate"
-    app:cardCornerRadius="@dimen/corner_radius_medium"
-    app:cardElevation="0dp"
+    app:cardCornerRadius="24dp"
     app:strokeWidth="0dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="24dp">
+        android:padding="12dp">
 
-        <TextView
-            android:id="@+id/tv_discount_tag"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/discountBadge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_primary_background"
-            android:backgroundTint="@color/alert_coral"
-            android:paddingHorizontal="16dp"
-            android:paddingVertical="8dp"
-            android:text="@string/discount_label"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            android:textStyle="bold"
+            app:cardBackgroundColor="@color/alert_coral"
+            app:cardCornerRadius="12dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageButton
-            android:id="@+id/fab_favorite"
-            android:layout_width="44dp"
-            android:layout_height="44dp"
-            android:background="@drawable/ic_launcher_background"
-            android:backgroundTint="#2A3547"
-            android:contentDescription="@string/app_name"
-            android:padding="8dp"
-            android:scaleType="fitCenter"
-            android:src="@android:drawable/btn_star_big_off"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/alert_coral" />
+            app:strokeWidth="0dp">
+
+            <TextView
+                android:id="@+id/tvDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="25% OFF"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </com.google.android.material.card.MaterialCardView>
 
         <ImageView
-            android:id="@+id/iv_product_image"
+            android:id="@+id/ivProduct"
             android:layout_width="match_parent"
-            android:layout_height="240dp"
-            android:layout_marginTop="16dp"
-            android:padding="40dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="8dp"
             android:scaleType="fitCenter"
-            app:layout_constraintTop_toBottomOf="@+id/tv_discount_tag"
-            tools:src="@mipmap/tudorsalshop3"
-            android:contentDescription="@string/app_name" />
+            android:src="@drawable/tudorsalshop3"
+            app:layout_constraintTop_toBottomOf="@id/discountBadge" />
 
         <TextView
-            android:id="@+id/tv_team_name"
+            android:id="@+id/tvTeam"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/white"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_product_image"
-            tools:text="FC Barcelona" />
-
-        <TextView
-            android:id="@+id/tv_season"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textColor="@color/ui_text_dimmed"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_team_name"
-            tools:text="Home Jersey • 2024/25" />
-
-        <TextView
-            android:id="@+id/tv_price"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:textColor="@color/accent_green"
-            android:textSize="26sp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Real Madrid"
+            android:textColor="@color/white"
+            android:textSize="16sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnAdd"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_season"
-            tools:text="$89.99" />
+            app:layout_constraintTop_toBottomOf="@id/ivProduct" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_add"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="$89.99"
+            android:textColor="@color/accent_green"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTeam" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:contentDescription="@string/add_to_cart"
+            android:src="@android:drawable/ic_input_add"
             app:backgroundTint="@color/accent_green"
-            app:icon="@android:drawable/ic_input_add"
-            app:iconGravity="textStart"
-            app:iconPadding="0dp"
-            app:iconSize="32dp"
-            app:iconTint="@color/white"
+            app:fabCustomSize="40dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
+            app:tint="@color/white" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

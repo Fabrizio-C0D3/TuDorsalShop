@@ -1,44 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.TuDorsalShop" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Colores base -->
+    <style name="Theme.TuDorsalShop" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Main Palette -->
         <item name="colorPrimary">@color/accent_green</item>
-        <item name="colorPrimaryVariant">@color/primary_dark</item>
         <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/surface_slate</item>
+        <item name="colorOnPrimaryContainer">@color/text_bone</item>
+        
         <item name="colorSecondary">@color/accent_green</item>
+        <item name="colorOnSecondary">@color/white</item>
         
         <item name="android:windowBackground">@color/primary_dark</item>
-        <item name="colorSurface">@color/white</item>
-        <item name="colorOnSurface">@color/text_dark</item>
-        
         <item name="android:statusBarColor">@color/primary_dark</item>
-        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:navigationBarColor">@color/primary_dark</item>
 
-        <!-- Estilos de componentes -->
-        <item name="materialButtonStyle">@style/Widget.TuDorsal.Button</item>
+        <!-- Components -->
+        <item name="materialCardViewStyle">@style/Widget.TuDorsal.Card</item>
         <item name="textInputStyle">@style/Widget.TuDorsal.TextInputLayout</item>
+        <item name="materialButtonStyle">@style/Widget.TuDorsal.Button</item>
+        <item name="bottomNavigationStyle">@style/Widget.TuDorsal.BottomNavigationView</item>
     </style>
 
-    <style name="Widget.TuDorsal.Button" parent="Widget.MaterialComponents.Button">
-        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.TuDorsal.Rounded12</item>
-        <item name="backgroundTint">@color/accent_green</item>
-
+    <style name="Widget.TuDorsal.Card" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">@color/surface_slate</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.TuDorsal.Rounded24</item>
+        <item name="cardElevation">0dp</item>
     </style>
 
-    <style name="Widget.TuDorsal.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+    <style name="Widget.TuDorsal.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
         <item name="boxStrokeColor">@color/accent_green</item>
-        <item name="boxCornerRadiusTopStart">12dp</item>
-        <item name="boxCornerRadiusTopEnd">12dp</item>
-        <item name="boxCornerRadiusBottomStart">12dp</item>
-        <item name="boxCornerRadiusBottomEnd">12dp</item>
+        <item name="hintTextColor">@color/accent_green</item>
+        <item name="placeholderTextColor">@color/text_dimmed</item>
+        <item name="boxCornerRadiusTopStart">16dp</item>
+        <item name="boxCornerRadiusTopEnd">16dp</item>
+        <item name="boxCornerRadiusBottomStart">16dp</item>
+        <item name="boxCornerRadiusBottomEnd">16dp</item>
+        <item name="android:textColorHint">@color/text_dimmed</item>
     </style>
 
-    <style name="ShapeAppearance.TuDorsal.Rounded12" parent="ShapeAppearance.MaterialComponents.SmallComponent">
-        <item name="cornerSize">12dp</item>
+    <style name="Widget.TuDorsal.Button" parent="Widget.Material3.Button">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.TuDorsal.Rounded16</item>
+        <item name="backgroundTint">@color/accent_green</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="ShapeAppearance.TuDorsal.CardTop" parent="ShapeAppearance.MaterialComponents.LargeComponent">
-        <item name="cornerSizeTopLeft">32dp</item>
-        <item name="cornerSizeTopRight">32dp</item>
+    <style name="Widget.TuDorsal.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="backgroundTint">@color/primary_dark</item>
+        <item name="itemIconTint">@color/bottom_nav_colors</item>
+        <item name="itemTextColor">@color/bottom_nav_colors</item>
+        <item name="itemActiveIndicatorStyle">@style/Widget.TuDorsal.Indicator</item>
+    </style>
+    
+    <style name="Widget.TuDorsal.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/accent_green</item>
+    </style>
+
+    <style name="ShapeAppearance.TuDorsal.Rounded16" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="ShapeAppearance.TuDorsal.Rounded24" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerSize">24dp</item>
+    </style>
+
+    <style name="ShapeAppearance.TuDorsal.Rounded32" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerSize">32dp</item>
     </style>
 </resources>

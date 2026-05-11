@@ -1,7 +1,7 @@
 package com.example.tudorsalshop
 
+import android.content.Intent
 import android.os.Bundle
-import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tudorsalshop.databinding.ActivityRegisterBinding
@@ -20,53 +20,20 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun setupListeners() {
         binding.btnRegisterSubmit.setOnClickListener {
-            if (validateForm()) {
-                // Lógica para crear cuenta
-                Toast.makeText(this, "Procesando registro...", Toast.LENGTH_SHORT).show()
+            val name = binding.tietFullName.text.toString()
+            val email = binding.tietEmail.text.toString()
+            val password = binding.tietPassword.text.toString()
+
+            if (name.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()) {
+                Toast.makeText(this, "¡Fichaje completado!", Toast.LENGTH_SHORT).show()
+                finish() // Volver al Login
+            } else {
+                Toast.makeText(this, getString(R.string.error_empty), Toast.LENGTH_SHORT).show()
             }
         }
 
         binding.tvSignInLink.setOnClickListener {
-            finish() // Regresa al Login
+            finish()
         }
-    }
-
-    private fun validateForm(): Boolean {
-        val name = binding.tietFullName.text.toString()
-        val email = binding.tietRegisterEmail.text.toString()
-        val password = binding.tietRegisterPassword.text.toString()
-        var isValid = true
-
-        // Validación Nombre
-        if (name.isEmpty()) {
-            binding.tilFullName.error = getString(R.string.error_empty)
-            isValid = false
-        } else {
-            binding.tilFullName.error = null
-        }
-
-        // Validación Email
-        if (email.isEmpty()) {
-            binding.tilRegisterEmail.error = getString(R.string.error_empty)
-            isValid = false
-        } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            binding.tilRegisterEmail.error = getString(R.string.error_email)
-            isValid = false
-        } else {
-            binding.tilRegisterEmail.error = null
-        }
-
-        // Validación Contraseña
-        if (password.isEmpty()) {
-            binding.tilRegisterPassword.error = getString(R.string.error_empty)
-            isValid = false
-        } else if (password.length < 8) {
-            binding.tilRegisterPassword.error = getString(R.string.error_password)
-            isValid = false
-        } else {
-            binding.tilRegisterPassword.error = null
-        }
-
-        return isValid
     }
 }

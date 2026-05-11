@@ -1,5 +1,6 @@
 package com.example.tudorsalshop
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
@@ -14,18 +15,18 @@ class CatalogActivity : AppCompatActivity() {
         binding = ActivityCatalogBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setupRecyclerView()
+        setupRecycler()
         setupBottomNavigation()
     }
 
-    private fun setupRecyclerView() {
+    private fun setupRecycler() {
         val products = listOf(
-            Product(1, "FC Barcelona", "Home Jersey 24/25", 89.99, 25, R.mipmap.tudorsalshop3, "La Liga"),
-            Product(2, "Real Madrid", "Away Jersey 24/25", 95.00, 10, R.mipmap.tudorsalshop3, "La Liga"),
-            Product(3, "Manchester City", "Home Jersey 24/25", 85.50, 15, R.mipmap.tudorsalshop3, "Premier League"),
-            Product(4, "Liverpool FC", "Third Jersey 24/25", 80.00, 20, R.mipmap.tudorsalshop3, "Premier League"),
-            Product(5, "Juventus", "Home Jersey 24/25", 88.00, 5, R.mipmap.tudorsalshop3, "Serie A"),
-            Product(6, "Argentina", "World Cup Edition", 110.00, 0, R.mipmap.tudorsalshop3, "National Teams")
+            Product(1, "FC Barcelona", "2024/25 Home", 89.99, 25, R.drawable.tudorsalshop3, "La Liga"),
+            Product(2, "Real Madrid", "2024/25 Away", 94.99, 15, R.drawable.tudorsalshop3, "La Liga"),
+            Product(3, "Man. City", "2024/25 Home", 92.50, 10, R.drawable.tudorsalshop3, "Premier League"),
+            Product(4, "Inter Milan", "2024/25 Home", 85.00, 20, R.drawable.tudorsalshop3, "Serie A"),
+            Product(5, "Arsenal", "2024/25 Home", 88.99, 5, R.drawable.tudorsalshop3, "Premier League"),
+            Product(6, "Liverpool", "2024/25 Away", 90.00, 25, R.drawable.tudorsalshop3, "Premier League")
         )
 
         binding.rvProducts.layoutManager = GridLayoutManager(this, 2)
@@ -38,15 +39,20 @@ class CatalogActivity : AppCompatActivity() {
             when (item.itemId) {
                 R.id.nav_home -> true
                 R.id.nav_cart -> {
-                    // Navegar al carrito
-                    true
+                    startActivity(Intent(this, CartActivity::class.java))
+                    false
                 }
                 R.id.nav_profile -> {
-                    // Navegar al perfil
-                    true
+                    startActivity(Intent(this, ProfileActivity::class.java))
+                    false
                 }
                 else -> false
             }
         }
+    }
+    
+    override fun onResume() {
+        super.onResume()
+        binding.bottomNavigation.selectedItemId = R.id.nav_home
     }
 }

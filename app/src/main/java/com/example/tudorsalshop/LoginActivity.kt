@@ -32,6 +32,7 @@ class LoginActivity : AppCompatActivity() {
 
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 Toast.makeText(this, getString(R.string.entrando_al_campo), Toast.LENGTH_SHORT).show()
+                navigateToCatalog()
             } else {
                 Toast.makeText(this, getString(R.string.error_empty), Toast.LENGTH_SHORT).show()
             }
@@ -53,6 +54,7 @@ class LoginActivity : AppCompatActivity() {
                 override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
                     super.onAuthenticationSucceeded(result)
                     Toast.makeText(applicationContext, getString(R.string.auth_success), Toast.LENGTH_SHORT).show()
+                    navigateToCatalog()
                 }
 
                 override fun onAuthenticationError(errorCode: Int, errString: CharSequence) {
@@ -66,5 +68,11 @@ class LoginActivity : AppCompatActivity() {
             .setSubtitle(getString(R.string.biometric_subtitle))
             .setNegativeButtonText(getString(R.string.biometric_negative_button))
             .build()
+    }
+
+    private fun navigateToCatalog() {
+        val intent = Intent(this, CatalogActivity::class.java)
+        startActivity(intent)
+        finish() // Finaliza LoginActivity para que el usuario no regrese al login con el botón de atrás
     }
 }
